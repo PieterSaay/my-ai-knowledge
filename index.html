@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Understanding AI – Made Simple</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🤖</span>
+        <span class="logo-text">Understanding AI</span>
+      </div>
+      <p class="tagline">Plain talk about Artificial Intelligence — no tech degree required</p>
+    </div>
+  </header>
+
+  <!-- NAV TABS -->
+  <nav class="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="nav-btn active" data-tab="what">What is AI?</button>
+      <button class="nav-btn" data-tab="everyday">AI in Daily Life</button>
+      <button class="nav-btn" data-tab="how">How AI Learns</button>
+      <button class="nav-btn" data-tab="safe">Is AI Safe?</button>
+      <button class="nav-btn" data-tab="faq">Common Questions</button>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- ── SECTION: WHAT IS AI ── -->
+    <section id="tab-what" class="tab-section active">
+
+      <div class="hero-card">
+        <h1>What <em>exactly</em> is Artificial Intelligence?</h1>
+        <p class="hero-subtitle">
+          AI is a computer program that can <strong>learn from experience</strong> and
+          make decisions — a bit like how a person learns, but much, much faster.
+        </p>
+      </div>
+
+      <div class="analogy-grid">
+
+        <div class="analogy-card">
+          <div class="analogy-icon">📚</div>
+          <h2>Think of it like a very fast student</h2>
+          <p>
+            Imagine a student who has read every book, newspaper, and website ever
+            written. They remember <em>everything</em> and can answer your questions
+            instantly. That is what AI does — it studies enormous amounts of
+            information and then uses that knowledge to help you.
+          </p>
+        </div>
+
+        <div class="analogy-card">
+          <div class="analogy-icon">🧩</div>
+          <h2>It spots patterns</h2>
+          <p>
+            AI is very good at recognising patterns. Show it a million photos of
+            cats and it will learn what a cat looks like. Show it millions of emails
+            and it learns which ones are spam. It is not magic — it is just very
+            good at finding patterns in large amounts of information.
+          </p>
+        </div>
+
+        <div class="analogy-card">
+          <div class="analogy-icon">🗣️</div>
+          <h2>It can understand language</h2>
+          <p>
+            Modern AI can read and write in plain English (and many other languages).
+            You can ask it a question in normal words — no special commands needed —
+            and it will give you a sensible answer, just like asking a knowledgeable friend.
+          </p>
+        </div>
+
+        <div class="analogy-card">
+          <div class="analogy-icon">🚫</div>
+          <h2>What AI is NOT</h2>
+          <ul class="plain-list">
+            <li>It is <strong>not</strong> a robot with a physical body (usually)</li>
+            <li>It is <strong>not</strong> alive or conscious</li>
+            <li>It is <strong>not</strong> smarter than humans at everything</li>
+            <li>It is <strong>not</strong> reading your private thoughts</li>
+            <li>It is <strong>not</strong> going to take over the world</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="info-banner">
+        <span class="info-icon">💡</span>
+        <p>
+          <strong>The short version:</strong> AI is a computer program trained on huge amounts of
+          information so it can answer questions, recognise things, and help with tasks —
+          without a human having to program every single step.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ── SECTION: EVERYDAY LIFE ── -->
+    <section id="tab-everyday" class="tab-section">
+
+      <div class="section-header">
+        <h1>AI you probably already use every day</h1>
+        <p class="section-subtitle">
+          AI is not something from a science-fiction film. Chances are you have been
+          using it for years — you just did not know it had a name.
+        </p>
+      </div>
+
+      <div class="everyday-grid">
+
+        <div class="everyday-card">
+          <div class="everyday-icon">🗺️</div>
+          <h2>Google Maps &amp; GPS</h2>
+          <p>
+            When you ask for directions and the app says "there is heavy traffic on
+            the main road, take this route instead" — that is AI. It watches traffic
+            patterns from millions of drivers and works out the fastest way for you.
+          </p>
+          <span class="badge">You've used this!</span>
+        </div>
+
+        <div class="everyday-card">
+          <div class="everyday-icon">📧</div>
+          <h2>Email Spam Filter</h2>
+          <p>
+            Ever notice how suspicious emails about lottery winnings or fake banks
+            go straight to your spam folder? AI reads incoming emails and decides
+            which ones look like junk before they reach you.
+          </p>
+          <span class="badge">You've used this!</span>
+        </div>
+
+        <div class="everyday-card">
+          <div class="everyday-icon">🎙️</div>
+          <h2>Voice Assistants</h2>
+          <p>
+            Siri (iPhone), Google Assistant (Android), and Alexa (Amazon's device)
+            are all powered by AI. When you say "Hey Siri, what's the weather
+            today?" — AI listens, understands your words, and finds the answer.
+          </p>
+          <span class="badge">You may use this!</span>
+        </div>
+
+        <div class="everyday-card">
+          <div class="everyday-icon">📺</div>
+          <h2>Netflix &amp; YouTube Suggestions</h2>
+          <p>
+            When Netflix says "Because you watched this, you might enjoy that" —
+            AI is studying what you like and suggesting more of the same. It learns
+            your taste over time, just like a friend who knows you well.
+          </p>
+          <span class="badge">You've used this!</span>
+        </div>
+
+        <div class="everyday-card">
+          <div class="everyday-icon">📱</div>
+          <h2>Autocorrect &amp; Autocomplete</h2>
+          <p>
+            When you type a message on your phone and it suggests the next word, or
+            corrects "teh" to "the" — that is AI predicting what you mean based on
+            how millions of other people write.
+          </p>
+          <span class="badge">You've used this!</span>
+        </div>
+
+        <div class="everyday-card">
+          <div class="everyday-icon">📸</div>
+          <h2>Photo Recognition</h2>
+          <p>
+            When your phone groups photos by the people in them — "Here are all
+            your photos with grandchildren" — it has used AI to recognise faces.
+            Google Photos and Apple Photos both do this automatically.
+          </p>
+          <span class="badge">You may use this!</span>
+        </div>
+
+        <div class="everyday-card">
+          <div class="everyday-icon">🏦</div>
+          <h2>Bank Fraud Protection</h2>
+          <p>
+            If your bank ever phoned to ask "Did you just make this purchase?" —
+            AI spotted that the purchase looked unusual for you and raised a flag.
+            AI is constantly watching for suspicious activity to protect your money.
+          </p>
+          <span class="badge">Working for you!</span>
+        </div>
+
+        <div class="everyday-card">
+          <div class="everyday-icon">🌡️</div>
+          <h2>Weather Forecasts</h2>
+          <p>
+            Modern weather forecasting uses AI to analyse data from satellites,
+            weather stations, and ocean sensors worldwide. AI helps predict whether
+            to bring an umbrella tomorrow more accurately than ever before.
+          </p>
+          <span class="badge">You've used this!</span>
+        </div>
+
+        <div class="everyday-card">
+          <div class="everyday-icon">🩺</div>
+          <h2>Medical Scanning</h2>
+          <p>
+            AI now helps doctors read X-rays, scans, and blood test results. It can
+            spot very small early signs of cancer or disease that a human eye might
+            miss — giving patients a better chance of catching problems early.
+          </p>
+          <span class="badge">Helping doctors!</span>
+        </div>
+
+      </div>
+
+      <div class="info-banner">
+        <span class="info-icon">💡</span>
+        <p>
+          <strong>Key takeaway:</strong> AI is already part of your everyday life.
+          It mostly works quietly in the background, making things more convenient and safer.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ── SECTION: HOW AI LEARNS ── -->
+    <section id="tab-how" class="tab-section">
+
+      <div class="section-header">
+        <h1>How does AI actually learn?</h1>
+        <p class="section-subtitle">
+          You do not need to understand the technical details. Here is a simple,
+          honest explanation of the basic idea.
+        </p>
+      </div>
+
+      <div class="steps-container">
+
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h2>Collect a lot of examples</h2>
+            <p>
+              To teach AI to recognise cats, you show it millions of photos labelled
+              "cat" and millions labelled "not a cat". To teach it to chat, you give
+              it billions of written sentences from books, websites, and articles.
+            </p>
+            <div class="step-example">
+              <strong>Real example:</strong> ChatGPT was trained on roughly the equivalent
+              of hundreds of millions of books worth of text.
+            </div>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h2>The AI makes guesses and gets corrected</h2>
+            <p>
+              The AI looks at an example and makes a guess. If the guess is wrong,
+              a tiny adjustment is made to help it do better next time. This happens
+              billions of times — and gradually the AI gets much better.
+            </p>
+            <div class="step-example">
+              <strong>Analogy:</strong> Like learning to throw a ball — you throw,
+              miss, adjust slightly, throw again, miss less, and eventually hit the target.
+            </div>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h2>It stores what it learned</h2>
+            <p>
+              All those adjustments are saved as billions of numbers inside the
+              computer. Those numbers are the AI's "knowledge" — its way of
+              recognising patterns it has seen before.
+            </p>
+            <div class="step-example">
+              <strong>Analogy:</strong> Like a sponge that soaks up experience over
+              time. The more it learns, the better the answers it can give.
+            </div>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h2>You ask it something new</h2>
+            <p>
+              When you ask a question, the AI uses everything it learned to produce
+              the most useful answer it can. It does not look things up in real time
+              (unless connected to the internet) — it draws on its training.
+            </p>
+            <div class="step-example">
+              <strong>Important:</strong> This is why AI can sometimes be wrong —
+              it did not actually experience things, it only learned from text or data.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="types-section">
+        <h2 class="types-title">Three types of AI you might hear about</h2>
+        <div class="types-grid">
+          <div class="type-card">
+            <div class="type-icon">🎯</div>
+            <h3>Narrow AI</h3>
+            <p>Does <em>one specific thing</em> very well — like recognising faces in photos or translating languages. This is the most common type today.</p>
+          </div>
+          <div class="type-card">
+            <div class="type-icon">💬</div>
+            <h3>Chatbots &amp; Assistants</h3>
+            <p>Programs like ChatGPT, Siri, and Alexa that can hold a conversation and answer general questions across many topics.</p>
+          </div>
+          <div class="type-card">
+            <div class="type-icon">🚗</div>
+            <h3>Self-driving Cars</h3>
+            <p>AI that watches the road, recognises cars, signs, and pedestrians, and makes driving decisions — still being developed and tested.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── SECTION: IS AI SAFE ── -->
+    <section id="tab-safe" class="tab-section">
+
+      <div class="section-header">
+        <h1>Is AI safe? Should I be worried?</h1>
+        <p class="section-subtitle">
+          It is completely natural to wonder about this. Here are honest, straightforward
+          answers to the most common concerns.
+        </p>
+      </div>
+
+      <div class="concerns-grid">
+
+        <div class="concern-card">
+          <div class="concern-header">
+            <span class="concern-icon">🔒</span>
+            <h2>"Is AI spying on me?"</h2>
+          </div>
+          <div class="concern-answer">
+            <p>
+              AI tools <strong>do not</strong> secretly watch you. However, some apps
+              (like voice assistants) <em>do</em> listen for a trigger word ("Hey Siri",
+              "Alexa"). Companies collect data about how you use their products — this
+              is not unique to AI, and you can usually turn it off in settings.
+            </p>
+            <p class="tip">
+              <strong>Tip:</strong> Only use AI tools from companies you trust.
+              Read their privacy policy or ask a younger family member to help you check.
+            </p>
+          </div>
+        </div>
+
+        <div class="concern-card">
+          <div class="concern-header">
+            <span class="concern-icon">❌</span>
+            <h2>"What if AI gives me wrong information?"</h2>
+          </div>
+          <div class="concern-answer">
+            <p>
+              AI can and does make mistakes — it is not perfect. It can sometimes
+              state incorrect facts confidently. This is known as an AI
+              "<strong>hallucination</strong>". Always double-check important information,
+              especially anything to do with health, money, or legal matters.
+            </p>
+            <p class="tip">
+              <strong>Tip:</strong> Use AI as a starting point, not a final answer.
+              For important decisions, always speak to a doctor, lawyer, or financial adviser.
+            </p>
+          </div>
+        </div>
+
+        <div class="concern-card">
+          <div class="concern-header">
+            <span class="concern-icon">🎭</span>
+            <h2>"Can AI pretend to be someone I know?"</h2>
+          </div>
+          <div class="concern-answer">
+            <p>
+              Yes — and this is a <strong>real risk</strong> to be aware of. Scammers
+              can use AI to clone voices or create fake video of someone you trust.
+              If you ever receive an unexpected call from a "grandchild" or "bank manager"
+              asking for money or personal details — hang up and call them back on a
+              number you already know.
+            </p>
+            <p class="tip">
+              <strong>Tip:</strong> Agree on a secret family code word that a scammer
+              would not know. If the caller cannot say it, it is not them.
+            </p>
+          </div>
+        </div>
+
+        <div class="concern-card">
+          <div class="concern-header">
+            <span class="concern-icon">💼</span>
+            <h2>"Will AI take everyone's jobs?"</h2>
+          </div>
+          <div class="concern-answer">
+            <p>
+              AI is changing many jobs, just as computers changed jobs in the 1980s
+              and the internet changed jobs in the 2000s. Some jobs will change, some
+              will disappear, and many <em>new</em> jobs will be created. For most
+              people already retired, this is not a personal concern — but it is a
+              topic society is actively discussing.
+            </p>
+          </div>
+        </div>
+
+        <div class="concern-card">
+          <div class="concern-header">
+            <span class="concern-icon">🤖</span>
+            <h2>"Will AI become smarter than us and take over?"</h2>
+          </div>
+          <div class="concern-answer">
+            <p>
+              This concern comes from science-fiction films. Today's AI is very
+              good at <em>specific tasks</em> but has no desires, ambitions, or
+              intentions of its own. It cannot decide to "do things" on its own —
+              it only responds when asked. Scientists and engineers are actively
+              working on keeping AI safe and under human control.
+            </p>
+          </div>
+        </div>
+
+        <div class="concern-card concern-card--positive">
+          <div class="concern-header">
+            <span class="concern-icon">✅</span>
+            <h2>The good news about AI</h2>
+          </div>
+          <div class="concern-answer">
+            <ul class="plain-list">
+              <li>AI is helping doctors detect cancer earlier</li>
+              <li>AI is making roads safer by watching for dangers</li>
+              <li>AI translates languages so people can communicate worldwide</li>
+              <li>AI helps elderly people live more independently at home</li>
+              <li>AI is speeding up climate and medical research</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ── SECTION: FAQ ── -->
+    <section id="tab-faq" class="tab-section">
+
+      <div class="section-header">
+        <h1>Common questions — answered simply</h1>
+        <p class="section-subtitle">
+          Click any question to see the answer.
+        </p>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do I need to be good with computers to use AI?</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Not at all. Modern AI tools are designed to be used in plain,
+              everyday language. You simply type or speak a question, just like
+              you would ask a friend, and the AI responds. No special skills or
+              technical knowledge is needed.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Is ChatGPT the same as AI?</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              ChatGPT is <em>one type</em> of AI — specifically an AI chatbot
+              made by a company called OpenAI. Calling ChatGPT "AI" is like
+              calling a Ford car "a vehicle". There are many different AI tools
+              made by many different companies (Google, Apple, Microsoft, Amazon
+              and others). ChatGPT is just the most well-known at the moment.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can I try AI for free?</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes! Several AI tools have a free version you can try:
+            </p>
+            <ul class="plain-list">
+              <li><strong>ChatGPT</strong> (chat.openai.com) — free plan available</li>
+              <li><strong>Google Gemini</strong> (gemini.google.com) — free with a Google account</li>
+              <li><strong>Microsoft Copilot</strong> (copilot.microsoft.com) — free</li>
+              <li><strong>Claude</strong> (claude.ai) — free plan available</li>
+            </ul>
+            <p>You can ask them anything — try "Explain climate change simply" or "What is a good recipe for chicken soup".</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Does AI remember our conversations?</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              It depends on the tool. By default, many AI chatbots remember the
+              conversation <em>within one session</em> (while you have the window open),
+              but forget everything once you close it and start a new chat. Some tools
+              offer optional "memory" features you can turn on if you want it to
+              remember you between sessions.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Should I share personal information with AI?</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Be cautious. As a general rule:
+            </p>
+            <ul class="plain-list">
+              <li>Do <strong>not</strong> share your ID numbers, banking details, or passwords</li>
+              <li>Do <strong>not</strong> share sensitive medical records</li>
+              <li>It is <strong>fine</strong> to ask general questions about health symptoms or conditions</li>
+              <li>It is <strong>fine</strong> to ask for recipes, explanations, and advice</li>
+            </ul>
+            <p>Treat it like talking to a helpful stranger in a coffee shop — friendly and useful, but you would not hand over your bank card.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can AI help me with health questions?</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              AI can be a useful first step — for example, explaining what a medical
+              term means, or helping you understand a diagnosis you received. However,
+              it is <strong>not a doctor</strong> and should never replace proper
+              medical advice. Always consult your GP or a healthcare professional
+              for anything important about your health.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Why does AI sometimes say things that are not true?</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              AI generates answers based on patterns in the text it was trained on —
+              it does not actually "look things up" or "know" facts the way a
+              textbook does. Sometimes it fills in gaps with plausible-sounding but
+              incorrect information. This is called a "<strong>hallucination</strong>".
+              It is one of the biggest current limitations of AI, and researchers
+              are actively working to reduce it.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How is AI different from a normal internet search?</span>
+            <span class="faq-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              A normal search (like Google) finds <em>links to pages</em> that
+              contain your keywords, then you read those pages yourself. AI reads
+              the information and <em>writes you a direct answer</em> in plain
+              language. It is like the difference between going to a library to
+              look for a book versus asking a knowledgeable librarian who reads
+              the books and tells you the answer directly.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>
+      Made to help everyone understand AI — no matter your age or tech experience.
+    </p>
+    <p class="footer-note">
+      Information is for general understanding only. Always consult professionals
+      for health, legal, and financial decisions.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

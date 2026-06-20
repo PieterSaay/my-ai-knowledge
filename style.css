@@ -1,0 +1,651 @@
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue:       #1d4ed8;
+  --blue-light: #dbeafe;
+  --blue-mid:   #3b82f6;
+  --amber:      #f59e0b;
+  --amber-light:#fef3c7;
+  --green:      #16a34a;
+  --green-light:#dcfce7;
+  --red-light:  #fee2e2;
+  --gray-dark:  #1e293b;
+  --gray-mid:   #475569;
+  --gray-light: #f1f5f9;
+  --white:      #ffffff;
+  --shadow:     0 2px 12px rgba(0,0,0,0.08);
+  --shadow-lg:  0 4px 24px rgba(0,0,0,0.12);
+  --radius:     14px;
+  --radius-sm:  8px;
+}
+
+html {
+  font-size: 20px; /* larger base for older readers */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--gray-light);
+  color: var(--gray-dark);
+  line-height: 1.8;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: var(--white);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.logo-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #bfdbfe;
+  font-style: italic;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.main-nav {
+  background: var(--white);
+  border-bottom: 2px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.nav-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: 0;
+}
+
+.nav-btn {
+  flex: 1 0 auto;
+  padding: 1rem 1.4rem;
+  background: none;
+  border: none;
+  border-bottom: 4px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gray-mid);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.nav-btn:hover {
+  color: var(--blue);
+  background: var(--blue-light);
+}
+
+.nav-btn.active {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+  background: var(--blue-light);
+}
+
+/* ============================================================
+   MAIN CONTENT & TABS
+   ============================================================ */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.tab-section {
+  display: none;
+}
+
+.tab-section.active {
+  display: block;
+}
+
+/* ============================================================
+   WHAT IS AI — HERO CARD
+   ============================================================ */
+.hero-card {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border: 2px solid #bfdbfe;
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero-card h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.hero-card h1 em {
+  font-style: italic;
+  color: #1e40af;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--gray-dark);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   ANALOGY GRID
+   ============================================================ */
+.analogy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 640px) {
+  .analogy-grid { grid-template-columns: 1fr; }
+}
+
+.analogy-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--blue-mid);
+}
+
+.analogy-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.analogy-card h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 0.75rem;
+}
+
+.analogy-card p {
+  font-size: 0.95rem;
+  color: var(--gray-mid);
+}
+
+/* ============================================================
+   PLAIN LIST
+   ============================================================ */
+.plain-list {
+  list-style: none;
+  padding: 0;
+}
+
+.plain-list li {
+  padding: 0.3rem 0 0.3rem 1.6rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: var(--gray-mid);
+}
+
+.plain-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: 700;
+}
+
+.analogy-card .plain-list li::before {
+  content: "✗";
+  color: #ef4444;
+}
+
+/* ============================================================
+   INFO BANNER
+   ============================================================ */
+.info-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--amber-light);
+  border: 2px solid var(--amber);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.info-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.info-banner p {
+  font-size: 1rem;
+  color: #78350f;
+}
+
+/* ============================================================
+   SECTION HEADERS
+   ============================================================ */
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--gray-dark);
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--gray-mid);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   EVERYDAY GRID
+   ============================================================ */
+.everyday-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 720px) {
+  .everyday-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .everyday-grid { grid-template-columns: 1fr; }
+}
+
+.everyday-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-left: 5px solid var(--blue-mid);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.everyday-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.everyday-icon {
+  font-size: 2rem;
+}
+
+.everyday-card h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gray-dark);
+}
+
+.everyday-card p {
+  font-size: 0.88rem;
+  color: var(--gray-mid);
+  flex: 1;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--green-light);
+  color: var(--green);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  margin-top: 0.25rem;
+}
+
+/* ============================================================
+   HOW AI LEARNS — STEPS
+   ============================================================ */
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.step-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.75rem 1.75rem 1.25rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  background: var(--blue);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 800;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-content h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gray-dark);
+  margin-bottom: 0.5rem;
+}
+
+.step-content p {
+  font-size: 0.95rem;
+  color: var(--gray-mid);
+  margin-bottom: 0.75rem;
+}
+
+.step-example {
+  background: var(--blue-light);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  font-size: 0.88rem;
+  color: #1e40af;
+}
+
+/* ============================================================
+   TYPES OF AI
+   ============================================================ */
+.types-section {
+  margin-top: 1rem;
+}
+
+.types-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gray-dark);
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.types-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .types-grid { grid-template-columns: 1fr; }
+}
+
+.type-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  border-top: 4px solid var(--amber);
+}
+
+.type-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.type-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gray-dark);
+  margin-bottom: 0.5rem;
+}
+
+.type-card p {
+  font-size: 0.88rem;
+  color: var(--gray-mid);
+}
+
+/* ============================================================
+   IS AI SAFE — CONCERNS
+   ============================================================ */
+.concerns-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.concern-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border-left: 6px solid var(--blue-mid);
+}
+
+.concern-card--positive {
+  border-left-color: var(--green);
+}
+
+.concern-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--gray-light);
+}
+
+.concern-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.concern-header h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-dark);
+}
+
+.concern-answer {
+  padding: 1.25rem 1.5rem;
+}
+
+.concern-answer p {
+  font-size: 0.95rem;
+  color: var(--gray-mid);
+  margin-bottom: 0.75rem;
+}
+
+.concern-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.tip {
+  background: var(--amber-light);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  font-size: 0.88rem !important;
+  color: #78350f !important;
+}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-dark);
+  cursor: pointer;
+  text-align: left;
+  gap: 1rem;
+  transition: background 0.15s;
+}
+
+.faq-question:hover {
+  background: var(--gray-light);
+}
+
+.faq-question[aria-expanded="true"] {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+
+.faq-arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.faq-question[aria-expanded="true"] .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 1.5rem 1.5rem;
+  font-size: 0.95rem;
+  color: var(--gray-mid);
+}
+
+.faq-answer.open {
+  display: block;
+}
+
+.faq-answer p {
+  margin-bottom: 0.75rem;
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-answer .plain-list li::before {
+  content: "•";
+  color: var(--blue);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: var(--gray-dark);
+  color: #94a3b8;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.site-footer .footer-note {
+  margin-top: 0.5rem;
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+/* ============================================================
+   FONT SIZE CONTROLS (accessibility toolbar)
+   ============================================================ */
+.font-controls {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 200;
+}
+
+.font-btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  transition: background 0.15s, transform 0.15s;
+}
+
+.font-btn:hover {
+  background: #1e40af;
+  transform: scale(1.1);
+}
+
+.font-label {
+  text-align: center;
+  font-size: 0.65rem;
+  color: var(--gray-mid);
+  line-height: 1.2;
+}
