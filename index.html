@@ -26,6 +26,7 @@
       <button class="nav-btn" data-tab="everyday">AI in Daily Life</button>
       <button class="nav-btn" data-tab="how">How AI Learns</button>
       <button class="nav-btn" data-tab="safe">Is AI Safe?</button>
+      <button class="nav-btn" data-tab="fundamentals">AI Fundamentals</button>
       <button class="nav-btn" data-tab="faq">Common Questions</button>
     </div>
   </nav>
@@ -599,6 +600,298 @@
           </div>
         </div>
 
+      </div>
+
+    </section>
+
+    <!-- ── SECTION: AI FUNDAMENTALS ── -->
+    <section id="tab-fundamentals" class="tab-section">
+
+      <div class="section-header">
+        <h1>AI Fundamentals — the building blocks explained</h1>
+        <p class="section-subtitle">
+          Words like "model" and "agent" get thrown around a lot. Here is what they
+          actually mean, in plain English.
+        </p>
+      </div>
+
+      <!-- COMPONENT CARDS -->
+      <div class="fundamentals-grid">
+
+        <div class="fund-card fund-card--blue">
+          <div class="fund-icon">🧠</div>
+          <h2>What is a Model?</h2>
+          <p>
+            A <strong>model</strong> is the "brain" of an AI system. It is a large
+            mathematical program that has been trained on enormous amounts of
+            information — text, images, audio, or data — until it learned to
+            recognise patterns and produce useful answers.
+          </p>
+          <p>
+            Think of it like a very experienced chef who has cooked thousands of
+            meals. They have learned so much that they can now create new dishes
+            without following a recipe. The model is that accumulated knowledge.
+          </p>
+          <div class="fund-examples">
+            <span class="fund-tag">GPT-4 (ChatGPT)</span>
+            <span class="fund-tag">Gemini (Google)</span>
+            <span class="fund-tag">Claude (Anthropic)</span>
+          </div>
+        </div>
+
+        <div class="fund-card fund-card--purple">
+          <div class="fund-icon">🤖</div>
+          <h2>What is an Agent?</h2>
+          <p>
+            An <strong>agent</strong> is an AI that does not just answer questions —
+            it can take <em>actions</em> to complete a task on your behalf. It can
+            plan steps, use tools, browse the internet, write and run code, and
+            check its own work until the job is done.
+          </p>
+          <p>
+            Think of a model as a very smart adviser you ask questions. An agent
+            is like hiring that same adviser as an employee — they go away and
+            actually <em>do</em> the work, not just tell you what to do.
+          </p>
+          <div class="fund-examples">
+            <span class="fund-tag">Research agents</span>
+            <span class="fund-tag">Coding assistants</span>
+            <span class="fund-tag">AI customer support</span>
+          </div>
+        </div>
+
+        <div class="fund-card fund-card--green">
+          <div class="fund-icon">📦</div>
+          <h2>What is Training Data?</h2>
+          <p>
+            <strong>Training data</strong> is the collection of examples used to
+            teach an AI model. For a language model this might be billions of
+            web pages, books, and articles. For an image model it could be
+            millions of labelled photographs.
+          </p>
+          <p>
+            Without training data, a model knows nothing — like a brand-new
+            student on their first day of school. The quality and size of the
+            training data directly determines how good the AI becomes.
+          </p>
+          <div class="fund-examples">
+            <span class="fund-tag">Text &amp; books</span>
+            <span class="fund-tag">Images</span>
+            <span class="fund-tag">Audio recordings</span>
+          </div>
+        </div>
+
+        <div class="fund-card fund-card--amber">
+          <div class="fund-icon">🕸️</div>
+          <h2>What is a Neural Network?</h2>
+          <p>
+            A <strong>neural network</strong> is the internal structure of most AI
+            models. It is loosely inspired by how the human brain works — thousands
+            of tiny connected parts that pass signals to each other, each one
+            adjusting slightly as the AI learns.
+          </p>
+          <p>
+            You do not need to understand the details. Just know: a neural network
+            is the engine inside the model, the same way an engine is inside a car.
+            You use the car without needing to understand combustion.
+          </p>
+          <div class="fund-examples">
+            <span class="fund-tag">Deep learning</span>
+            <span class="fund-tag">Image recognition</span>
+            <span class="fund-tag">Language processing</span>
+          </div>
+        </div>
+
+        <div class="fund-card fund-card--teal">
+          <div class="fund-icon">💬</div>
+          <h2>What is a Prompt?</h2>
+          <p>
+            A <strong>prompt</strong> is simply the question or instruction you
+            give to an AI. When you type "Explain climate change in simple words"
+            into ChatGPT, that sentence is your prompt.
+          </p>
+          <p>
+            The way you phrase a prompt matters — a clear, specific prompt gets a
+            better answer than a vague one. "Give me a chicken recipe that takes
+            30 minutes" works better than just "food".
+          </p>
+          <div class="fund-examples">
+            <span class="fund-tag">Questions</span>
+            <span class="fund-tag">Instructions</span>
+            <span class="fund-tag">Conversations</span>
+          </div>
+        </div>
+
+        <div class="fund-card fund-card--red">
+          <div class="fund-icon">🔗</div>
+          <h2>How do they all link together?</h2>
+          <p>
+            <strong>Training data</strong> is fed into a <strong>neural network</strong>
+            to create a <strong>model</strong>. You communicate with the model
+            using a <strong>prompt</strong>. When a model is given the ability to
+            take actions (like browsing the web or sending emails), it becomes an
+            <strong>agent</strong>.
+          </p>
+          <p>
+            Data → Neural Network → Model → You talk to it via Prompts →
+            Give it tools and it becomes an Agent.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- VISUAL WORKFLOWS -->
+      <div class="workflows-section">
+        <h2 class="workflows-title">Visual Workflows — how it all works</h2>
+
+        <!-- WORKFLOW 1: Simple AI Request -->
+        <div class="workflow-block">
+          <h3 class="workflow-label">1 &nbsp;How AI answers your question</h3>
+          <div class="workflow-row">
+            <div class="wf-node wf-node--start">
+              <div class="wf-node-icon">🧑</div>
+              <div class="wf-node-title">You</div>
+              <div class="wf-node-desc">Type or speak a question</div>
+            </div>
+            <div class="wf-arrow">▶</div>
+            <div class="wf-node">
+              <div class="wf-node-icon">📥</div>
+              <div class="wf-node-title">Prompt received</div>
+              <div class="wf-node-desc">Your words are converted to data the model can read</div>
+            </div>
+            <div class="wf-arrow">▶</div>
+            <div class="wf-node wf-node--highlight">
+              <div class="wf-node-icon">🧠</div>
+              <div class="wf-node-title">AI Model</div>
+              <div class="wf-node-desc">Searches its trained knowledge for the best answer</div>
+            </div>
+            <div class="wf-arrow">▶</div>
+            <div class="wf-node">
+              <div class="wf-node-icon">✍️</div>
+              <div class="wf-node-title">Answer built</div>
+              <div class="wf-node-desc">Generates a response word by word</div>
+            </div>
+            <div class="wf-arrow">▶</div>
+            <div class="wf-node wf-node--end">
+              <div class="wf-node-icon">💬</div>
+              <div class="wf-node-title">You see the answer</div>
+              <div class="wf-node-desc">Plain English reply appears on screen</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WORKFLOW 2: How AI Learns (Training Loop) -->
+        <div class="workflow-block">
+          <h3 class="workflow-label">2 &nbsp;How a model is trained (the learning loop)</h3>
+          <div class="workflow-row">
+            <div class="wf-node wf-node--start">
+              <div class="wf-node-icon">📦</div>
+              <div class="wf-node-title">Training Data</div>
+              <div class="wf-node-desc">Millions of examples collected</div>
+            </div>
+            <div class="wf-arrow">▶</div>
+            <div class="wf-node">
+              <div class="wf-node-icon">🕸️</div>
+              <div class="wf-node-title">Neural Network</div>
+              <div class="wf-node-desc">Makes a guess at the answer</div>
+            </div>
+            <div class="wf-arrow">▶</div>
+            <div class="wf-node wf-node--highlight">
+              <div class="wf-node-icon">⚖️</div>
+              <div class="wf-node-title">Check the guess</div>
+              <div class="wf-node-desc">Compare guess to the correct answer</div>
+            </div>
+            <div class="wf-arrow">▶</div>
+            <div class="wf-node">
+              <div class="wf-node-icon">🔧</div>
+              <div class="wf-node-title">Adjust &amp; improve</div>
+              <div class="wf-node-desc">Tiny corrections made — billions of times</div>
+            </div>
+            <div class="wf-arrow">▶</div>
+            <div class="wf-node wf-node--end">
+              <div class="wf-node-icon">✅</div>
+              <div class="wf-node-title">Trained Model</div>
+              <div class="wf-node-desc">Ready to answer your questions</div>
+            </div>
+          </div>
+          <div class="workflow-loop-note">
+            <span class="loop-arrow">↩</span> This loop repeats billions of times before training is complete
+          </div>
+        </div>
+
+        <!-- WORKFLOW 3: Agent Workflow -->
+        <div class="workflow-block">
+          <h3 class="workflow-label">3 &nbsp;How an AI Agent completes a task</h3>
+          <div class="workflow-row">
+            <div class="wf-node wf-node--start">
+              <div class="wf-node-icon">📋</div>
+              <div class="wf-node-title">Task given</div>
+              <div class="wf-node-desc">"Book me a restaurant for Friday night"</div>
+            </div>
+            <div class="wf-arrow">▶</div>
+            <div class="wf-node">
+              <div class="wf-node-icon">💭</div>
+              <div class="wf-node-title">Agent plans</div>
+              <div class="wf-node-desc">Breaks task into steps to follow</div>
+            </div>
+            <div class="wf-arrow">▶</div>
+            <div class="wf-node wf-node--highlight">
+              <div class="wf-node-icon">🛠️</div>
+              <div class="wf-node-title">Uses tools</div>
+              <div class="wf-node-desc">Searches web, reads menus, checks availability</div>
+            </div>
+            <div class="wf-arrow">▶</div>
+            <div class="wf-node">
+              <div class="wf-node-icon">🔍</div>
+              <div class="wf-node-title">Checks result</div>
+              <div class="wf-node-desc">Did it work? If not, tries again</div>
+            </div>
+            <div class="wf-arrow">▶</div>
+            <div class="wf-node wf-node--end">
+              <div class="wf-node-icon">🎉</div>
+              <div class="wf-node-title">Task done</div>
+              <div class="wf-node-desc">Reports back with the result</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COMPARISON TABLE -->
+      <div class="compare-section">
+        <h2 class="compare-title">Model vs Agent — what is the difference?</h2>
+        <div class="compare-table">
+          <div class="compare-header">
+            <div class="compare-col compare-col--label"></div>
+            <div class="compare-col compare-col--model">🧠 Model</div>
+            <div class="compare-col compare-col--agent">🤖 Agent</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-col compare-col--label">What it does</div>
+            <div class="compare-col">Answers questions</div>
+            <div class="compare-col">Completes tasks</div>
+          </div>
+          <div class="compare-row compare-row--alt">
+            <div class="compare-col compare-col--label">Takes action?</div>
+            <div class="compare-col">No — only talks</div>
+            <div class="compare-col">Yes — browses, writes, sends</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-col compare-col--label">Analogy</div>
+            <div class="compare-col">A knowledgeable adviser</div>
+            <div class="compare-col">An employee who does the work</div>
+          </div>
+          <div class="compare-row compare-row--alt">
+            <div class="compare-col compare-col--label">Example</div>
+            <div class="compare-col">ChatGPT answering a question</div>
+            <div class="compare-col">AI that books your travel for you</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-col compare-col--label">Needs a model?</div>
+            <div class="compare-col">It IS the model</div>
+            <div class="compare-col">Yes — built on top of a model</div>
+          </div>
+        </div>
       </div>
 
     </section>
