@@ -27,6 +27,7 @@
       <button class="nav-btn" data-tab="how">How AI Learns</button>
       <button class="nav-btn" data-tab="safe">Is AI Safe?</button>
       <button class="nav-btn" data-tab="fundamentals">AI Fundamentals</button>
+      <button class="nav-btn" data-tab="processflow">Process Flow</button>
       <button class="nav-btn" data-tab="buzzwords">Buzz Words</button>
       <button class="nav-btn" data-tab="faq">Common Questions</button>
     </div>
@@ -892,6 +893,739 @@
             <div class="compare-col">It IS the model</div>
             <div class="compare-col">Yes — built on top of a model</div>
           </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── SECTION: PROCESS FLOW ── -->
+    <section id="tab-processflow" class="tab-section">
+
+      <div class="section-header">
+        <h1>From Raw Data to Your Answer — The Complete AI Journey</h1>
+        <p class="section-subtitle">
+          Every step it takes to build a language model and then use it.
+          Follow the flow from the very beginning right through to the moment
+          your answer appears on screen.
+        </p>
+      </div>
+
+      <!-- PIPELINE OVERVIEW STRIP -->
+      <div class="pipeline-overview">
+        <div class="pipeline-scroll">
+          <div class="po-group">
+            <div class="po-label">Building the AI</div>
+            <div class="po-phases">
+              <div class="po-pill po-build">1<br><span>Collect Data</span></div>
+              <div class="po-arrow">›</div>
+              <div class="po-pill po-build">2<br><span>Clean Data</span></div>
+              <div class="po-arrow">›</div>
+              <div class="po-pill po-build">3<br><span>Design Model</span></div>
+              <div class="po-arrow">›</div>
+              <div class="po-pill po-build">4<br><span>Computing Power</span></div>
+              <div class="po-arrow">›</div>
+              <div class="po-pill po-build">5<br><span>Pre-Training</span></div>
+              <div class="po-arrow">›</div>
+              <div class="po-pill po-build">6<br><span>Evaluate</span></div>
+              <div class="po-arrow">›</div>
+              <div class="po-pill po-build">7<br><span>Human Feedback</span></div>
+              <div class="po-arrow">›</div>
+              <div class="po-pill po-build">8<br><span>Safety Testing</span></div>
+              <div class="po-arrow">›</div>
+              <div class="po-pill po-build">9<br><span>Deploy</span></div>
+            </div>
+          </div>
+          <div class="po-divider">⬇</div>
+          <div class="po-group">
+            <div class="po-label">Using the AI</div>
+            <div class="po-phases">
+              <div class="po-pill po-use">10<br><span>Your Prompt</span></div>
+              <div class="po-arrow">›</div>
+              <div class="po-pill po-use">11<br><span>Tokenise</span></div>
+              <div class="po-arrow">›</div>
+              <div class="po-pill po-use">12<br><span>Inference</span></div>
+              <div class="po-arrow">›</div>
+              <div class="po-pill po-use">13<br><span>Generate Words</span></div>
+              <div class="po-arrow">›</div>
+              <div class="po-pill po-use">14<br><span>Your Answer</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PHASE CARDS: BUILDING THE AI ── -->
+      <div class="pf-phase-group">
+        <div class="pf-group-header pf-group-build">
+          <span class="pf-group-icon">🏗️</span>
+          <div>
+            <h2>Part 1 — Building the AI</h2>
+            <p>Everything that happens before the AI is available for anyone to use. This takes months, costs tens of millions of pounds, and requires enormous computing power.</p>
+          </div>
+        </div>
+
+        <!-- PHASE 1 -->
+        <div class="pf-card">
+          <div class="pf-card-header pf-h-blue">
+            <div class="pf-num">1</div>
+            <div class="pf-title-block">
+              <span class="pf-icon">🌐</span>
+              <h3>Collect Raw Data</h3>
+            </div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-explanation">
+              <p>Before any learning can happen, the team needs a vast collection of human-written text. They gather billions of documents from across the internet and beyond.</p>
+              <ul class="pf-list">
+                <li>Web pages from across the internet (Common Crawl)</li>
+                <li>Digitised books and academic papers</li>
+                <li>Code from public software repositories</li>
+                <li>Wikipedia articles in dozens of languages</li>
+                <li>News articles, forums, and discussion boards</li>
+              </ul>
+              <div class="pf-scale-note">📏 <strong>Scale:</strong> GPT-4 was trained on roughly 45 terabytes of text — equivalent to tens of millions of books.</div>
+            </div>
+            <div class="pf-diagram">
+              <div class="pfd-title">Data Sources</div>
+              <div class="pfd-sources">
+                <div class="pfd-source pfd-s1">🌐<br>Web pages</div>
+                <div class="pfd-source pfd-s2">📚<br>Books</div>
+                <div class="pfd-source pfd-s3">💻<br>Code</div>
+                <div class="pfd-source pfd-s4">📰<br>News</div>
+                <div class="pfd-source pfd-s5">🔬<br>Research</div>
+              </div>
+              <div class="pfd-arrows-down">↓ &nbsp; ↓ &nbsp; ↓ &nbsp; ↓ &nbsp; ↓</div>
+              <div class="pfd-pool">
+                <span>📦</span>
+                <strong>Raw Data Pool</strong>
+                <span class="pfd-pool-size">Trillions of words</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 2 -->
+        <div class="pf-card">
+          <div class="pf-card-header pf-h-blue">
+            <div class="pf-num">2</div>
+            <div class="pf-title-block">
+              <span class="pf-icon">🧹</span>
+              <h3>Clean &amp; Prepare the Data</h3>
+            </div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-explanation">
+              <p>Raw internet data is messy — full of spam, duplicates, offensive material, and low-quality content. A huge cleaning operation transforms it into training-ready material.</p>
+              <ul class="pf-list">
+                <li>Remove exact duplicates and near-duplicates</li>
+                <li>Filter out spam, hate speech, and toxic content</li>
+                <li>Score each document for quality and remove poor ones</li>
+                <li>Split text into <em>tokens</em> (small chunks the model can read)</li>
+                <li>Assign each token a unique number from a vocabulary list</li>
+              </ul>
+              <div class="pf-scale-note">📏 <strong>Scale:</strong> Typically 40–70% of collected data is discarded during cleaning.</div>
+            </div>
+            <div class="pf-diagram">
+              <div class="pfd-title">Cleaning Pipeline</div>
+              <div class="pfd-clean-row">
+                <div class="pfd-clean-box pfd-dirty">🗃️ Raw Data<br><small>Messy, mixed quality</small></div>
+                <div class="pfd-clean-arrow">→</div>
+                <div class="pfd-clean-box pfd-filter">🔽 Filter<br><small>Remove spam &amp; junk</small></div>
+                <div class="pfd-clean-arrow">→</div>
+                <div class="pfd-clean-box pfd-tok">🔢 Tokenise<br><small>Split into numbered chunks</small></div>
+                <div class="pfd-clean-arrow">→</div>
+                <div class="pfd-clean-box pfd-ready">✅ Dataset<br><small>Ready to train</small></div>
+              </div>
+              <div class="pfd-token-example">
+                <div class="pfd-te-label">Example: "Hello world" → tokens</div>
+                <div class="pfd-tokens">
+                  <span class="pfd-tok-chip">"Hello"<br>15496</span>
+                  <span class="pfd-tok-chip">" world"<br>995</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 3 -->
+        <div class="pf-card">
+          <div class="pf-card-header pf-h-purple">
+            <div class="pf-num">3</div>
+            <div class="pf-title-block">
+              <span class="pf-icon">📐</span>
+              <h3>Design the Model Architecture</h3>
+            </div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-explanation">
+              <p>Researchers decide the shape and size of the neural network before training begins. These architectural choices determine how powerful the model can become.</p>
+              <ul class="pf-list">
+                <li>Choose the number of <em>layers</em> (depth of understanding)</li>
+                <li>Set the number of <em>attention heads</em> (how many things it focuses on at once)</li>
+                <li>Decide total <em>parameters</em> (billions of adjustable numbers)</li>
+                <li>Pick the <em>context window</em> size (how much it can read at once)</li>
+                <li>Select activation functions and normalisation methods</li>
+              </ul>
+              <div class="pf-scale-note">📏 <strong>Scale:</strong> GPT-3 has 175 billion parameters. GPT-4 is estimated at over 1 trillion.</div>
+            </div>
+            <div class="pf-diagram">
+              <div class="pfd-title">Transformer Architecture</div>
+              <div class="pfd-arch">
+                <div class="pfd-arch-layer pfd-al-out">📤 Output Layer — produces the answer</div>
+                <div class="pfd-arch-arrow">↑</div>
+                <div class="pfd-arch-layer pfd-al-attn">🔍 Attention Layers (×96) — understand relationships between words</div>
+                <div class="pfd-arch-arrow">↑</div>
+                <div class="pfd-arch-layer pfd-al-ff">⚙️ Feed-forward Layers — process and transform information</div>
+                <div class="pfd-arch-arrow">↑</div>
+                <div class="pfd-arch-layer pfd-al-emb">🔢 Embedding Layer — converts tokens to number vectors</div>
+                <div class="pfd-arch-arrow">↑</div>
+                <div class="pfd-arch-layer pfd-al-in">📥 Input — your tokenised text</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 4 -->
+        <div class="pf-card">
+          <div class="pf-card-header pf-h-purple">
+            <div class="pf-num">4</div>
+            <div class="pf-title-block">
+              <span class="pf-icon">🖥️</span>
+              <h3>Assemble Computing Power</h3>
+            </div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-explanation">
+              <p>Training a large model requires computing power on a scale that would have been unimaginable 10 years ago. Thousands of specialist chips work in parallel inside giant data centres.</p>
+              <ul class="pf-list">
+                <li>Thousands of <strong>GPUs</strong> (Graphics Processing Units) or <strong>TPUs</strong> (Tensor Processing Units) — chips designed specifically for AI maths</li>
+                <li>High-speed networking so all chips can share information instantly</li>
+                <li>Massive cooling systems — the chips generate enormous heat</li>
+                <li>Redundant power supplies — training cannot afford to stop</li>
+                <li>Specialist software to split the work across all chips simultaneously</li>
+              </ul>
+              <div class="pf-scale-note">💰 <strong>Cost:</strong> Training GPT-4 is estimated to have cost over $100 million in computing alone.</div>
+            </div>
+            <div class="pf-diagram">
+              <div class="pfd-title">Data Centre Setup</div>
+              <div class="pfd-datacenter">
+                <div class="pfd-dc-row">
+                  <div class="pfd-chip">GPU</div><div class="pfd-chip">GPU</div>
+                  <div class="pfd-chip">GPU</div><div class="pfd-chip">GPU</div>
+                  <div class="pfd-chip">GPU</div><div class="pfd-chip">GPU</div>
+                  <div class="pfd-chip">GPU</div><div class="pfd-chip">GPU</div>
+                </div>
+                <div class="pfd-dc-label">× thousands, connected at high speed</div>
+                <div class="pfd-dc-stats">
+                  <div class="pfd-dc-stat"><span>⚡</span>Megawatts of power</div>
+                  <div class="pfd-dc-stat"><span>❄️</span>Industrial cooling</div>
+                  <div class="pfd-dc-stat"><span>🏢</span>Warehouse-sized buildings</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 5 -->
+        <div class="pf-card pf-card--spotlight">
+          <div class="pf-card-header pf-h-orange">
+            <div class="pf-num">5</div>
+            <div class="pf-title-block">
+              <span class="pf-icon">🏋️</span>
+              <h3>Pre-Training — The Learning Loop</h3>
+            </div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-explanation">
+              <p>This is the main event — the AI actually learns. The model reads the training data over and over, making predictions, getting corrected, and adjusting itself until it becomes remarkably capable.</p>
+              <ul class="pf-list">
+                <li><strong>Forward pass:</strong> The model reads a snippet of text and predicts the next word</li>
+                <li><strong>Loss calculation:</strong> Compare the prediction to the real next word — measure how wrong it was</li>
+                <li><strong>Backward pass:</strong> Work backwards through the network, calculating how to improve</li>
+                <li><strong>Weight update:</strong> Nudge billions of numbers very slightly in the right direction</li>
+                <li>Repeat billions of times across the entire dataset</li>
+              </ul>
+              <div class="pf-scale-note">⏱️ <strong>Time:</strong> Training a large model takes weeks to months even with thousands of chips running continuously.</div>
+            </div>
+            <div class="pf-diagram">
+              <div class="pfd-title">The Training Loop</div>
+              <div class="pfd-loop">
+                <div class="pfd-loop-center">
+                  <div class="pfd-loop-core">🧠<br><small>Neural<br>Network</small></div>
+                </div>
+                <div class="pfd-loop-steps">
+                  <div class="pfd-loop-step pfd-ls-1">
+                    <div class="pfd-ls-icon">📥</div>
+                    <div class="pfd-ls-text"><strong>1. Input text</strong><br>"The cat sat on the ___"</div>
+                  </div>
+                  <div class="pfd-loop-step pfd-ls-2">
+                    <div class="pfd-ls-icon">🔮</div>
+                    <div class="pfd-ls-text"><strong>2. Make prediction</strong><br>Model guesses: "mat"</div>
+                  </div>
+                  <div class="pfd-loop-step pfd-ls-3">
+                    <div class="pfd-ls-icon">⚖️</div>
+                    <div class="pfd-ls-text"><strong>3. Check answer</strong><br>Real answer: "mat" ✓<br>or "chair" → wrong ✗</div>
+                  </div>
+                  <div class="pfd-loop-step pfd-ls-4">
+                    <div class="pfd-ls-icon">🔧</div>
+                    <div class="pfd-ls-text"><strong>4. Adjust weights</strong><br>Tiny nudge to billions<br>of numbers</div>
+                  </div>
+                </div>
+                <div class="pfd-loop-repeat">↩ Repeat billions of times</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 6 -->
+        <div class="pf-card">
+          <div class="pf-card-header pf-h-orange">
+            <div class="pf-num">6</div>
+            <div class="pf-title-block">
+              <span class="pf-icon">📊</span>
+              <h3>Evaluate &amp; Benchmark</h3>
+            </div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-explanation">
+              <p>Once a training run finishes, researchers run the model through hundreds of standardised tests — called benchmarks — to see how capable it is and where it falls short.</p>
+              <ul class="pf-list">
+                <li>Language understanding tests (reading comprehension, logic)</li>
+                <li>Mathematics and coding challenges</li>
+                <li>Common-sense reasoning questions</li>
+                <li>Multilingual ability tests</li>
+                <li>Comparison against previous versions and competitor models</li>
+              </ul>
+              <div class="pf-scale-note">🔄 If results are poor, the team adjusts the architecture or data and trains again from scratch.</div>
+            </div>
+            <div class="pf-diagram">
+              <div class="pfd-title">Benchmark Scoreboard</div>
+              <div class="pfd-scores">
+                <div class="pfd-score-row">
+                  <span class="pfd-score-label">Reading comprehension</span>
+                  <div class="pfd-score-bar"><div class="pfd-score-fill" style="width:91%"></div></div>
+                  <span class="pfd-score-val">91%</span>
+                </div>
+                <div class="pfd-score-row">
+                  <span class="pfd-score-label">Maths reasoning</span>
+                  <div class="pfd-score-bar"><div class="pfd-score-fill" style="width:78%"></div></div>
+                  <span class="pfd-score-val">78%</span>
+                </div>
+                <div class="pfd-score-row">
+                  <span class="pfd-score-label">Coding ability</span>
+                  <div class="pfd-score-bar"><div class="pfd-score-fill" style="width:85%"></div></div>
+                  <span class="pfd-score-val">85%</span>
+                </div>
+                <div class="pfd-score-row">
+                  <span class="pfd-score-label">Common sense</span>
+                  <div class="pfd-score-bar"><div class="pfd-score-fill" style="width:88%"></div></div>
+                  <span class="pfd-score-val">88%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 7 -->
+        <div class="pf-card pf-card--spotlight">
+          <div class="pf-card-header pf-h-green">
+            <div class="pf-num">7</div>
+            <div class="pf-title-block">
+              <span class="pf-icon">👤</span>
+              <h3>Human Feedback Training (RLHF)</h3>
+            </div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-explanation">
+              <p>Pre-training gives the AI knowledge, but it does not make it <em>helpful</em> or <em>polite</em>. A separate training phase uses human ratings to teach the model to respond the way people actually prefer.</p>
+              <ul class="pf-list">
+                <li>Human raters are shown several AI responses to the same question</li>
+                <li>They rank responses from best to worst based on helpfulness and accuracy</li>
+                <li>A separate "reward model" is trained to predict human preferences</li>
+                <li>The main model is then trained to score highly on the reward model</li>
+                <li>This process is called <strong>RLHF</strong> — Reinforcement Learning from Human Feedback</li>
+              </ul>
+              <div class="pf-scale-note">👥 Companies like OpenAI and Anthropic employ teams of human raters specifically for this process.</div>
+            </div>
+            <div class="pf-diagram">
+              <div class="pfd-title">RLHF Process</div>
+              <div class="pfd-rlhf">
+                <div class="pfd-rlhf-q">❓ Question: "What is the capital of France?"</div>
+                <div class="pfd-rlhf-responses">
+                  <div class="pfd-rlhf-resp pfd-rr-good">
+                    <div class="pfd-rr-label">Response A</div>
+                    <div class="pfd-rr-text">"The capital of France is Paris, a city known for the Eiffel Tower."</div>
+                    <div class="pfd-rr-rating">👤 Human rates: ⭐⭐⭐⭐⭐ Best</div>
+                  </div>
+                  <div class="pfd-rlhf-resp pfd-rr-mid">
+                    <div class="pfd-rr-label">Response B</div>
+                    <div class="pfd-rr-text">"Paris."</div>
+                    <div class="pfd-rr-rating">👤 Human rates: ⭐⭐⭐ OK</div>
+                  </div>
+                  <div class="pfd-rlhf-resp pfd-rr-bad">
+                    <div class="pfd-rr-label">Response C</div>
+                    <div class="pfd-rr-text">"France has many cities including Lyon, Marseille…"</div>
+                    <div class="pfd-rr-rating">👤 Human rates: ⭐ Unhelpful</div>
+                  </div>
+                </div>
+                <div class="pfd-rlhf-arrow">↓ Model learns to produce responses like A</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 8 -->
+        <div class="pf-card">
+          <div class="pf-card-header pf-h-green">
+            <div class="pf-num">8</div>
+            <div class="pf-title-block">
+              <span class="pf-icon">🛡️</span>
+              <h3>Safety Testing &amp; Alignment</h3>
+            </div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-explanation">
+              <p>Before any public release, the model goes through rigorous safety testing to ensure it will not cause harm, spread misinformation, or be easily misused.</p>
+              <ul class="pf-list">
+                <li><strong>Red teaming:</strong> Teams of specialists deliberately try to break the model — getting it to say harmful things, bypass its rules, or behave dangerously</li>
+                <li><strong>Guardrails:</strong> Rules built in to refuse certain types of requests</li>
+                <li><strong>Bias auditing:</strong> Check for unfair treatment of different groups</li>
+                <li><strong>Adversarial testing:</strong> Try unusual inputs designed to confuse the model</li>
+                <li><strong>Policy review:</strong> Legal and ethics teams review acceptable use</li>
+              </ul>
+              <div class="pf-scale-note">🔴 If serious safety issues are found, the model is not released. This has happened multiple times at major AI labs.</div>
+            </div>
+            <div class="pf-diagram">
+              <div class="pfd-title">Safety Layers</div>
+              <div class="pfd-safety">
+                <div class="pfd-safety-layer pfd-sl-1">🔴 <strong>Hard blocks</strong> — dangerous content always refused</div>
+                <div class="pfd-safety-layer pfd-sl-2">🟠 <strong>Guardrails</strong> — sensitive topics handled carefully</div>
+                <div class="pfd-safety-layer pfd-sl-3">🟡 <strong>Honesty training</strong> — model flags uncertainty</div>
+                <div class="pfd-safety-layer pfd-sl-4">🟢 <strong>Helpfulness</strong> — safe, useful responses</div>
+                <div class="pfd-safety-core">🧠 Model core</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 9 -->
+        <div class="pf-card">
+          <div class="pf-card-header pf-h-teal">
+            <div class="pf-num">9</div>
+            <div class="pf-title-block">
+              <span class="pf-icon">🚀</span>
+              <h3>Deploy the Model</h3>
+            </div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-explanation">
+              <p>The trained model is now packaged up and made available to the world through an API (a technical interface that allows other software to use it).</p>
+              <ul class="pf-list">
+                <li>Model weights saved as large files (often hundreds of gigabytes)</li>
+                <li>Loaded onto powerful <em>inference servers</em> — different from training servers</li>
+                <li>API endpoints created so apps and users can send it prompts</li>
+                <li>Load balancing set up to handle millions of requests simultaneously</li>
+                <li>Monitoring tools watch for unexpected or harmful outputs in the wild</li>
+              </ul>
+              <div class="pf-scale-note">🌍 A popular AI model like ChatGPT serves hundreds of millions of users, requiring enormous ongoing infrastructure.</div>
+            </div>
+            <div class="pf-diagram">
+              <div class="pfd-title">Deployment Stack</div>
+              <div class="pfd-deploy">
+                <div class="pfd-deploy-layer pfd-dl-user">👤 Users &amp; Apps (millions worldwide)</div>
+                <div class="pfd-deploy-arr">↕ HTTPS requests</div>
+                <div class="pfd-deploy-layer pfd-dl-api">🔌 API Gateway — routes &amp; authenticates requests</div>
+                <div class="pfd-deploy-arr">↕</div>
+                <div class="pfd-deploy-layer pfd-dl-lb">⚖️ Load Balancer — spreads load across servers</div>
+                <div class="pfd-deploy-arr">↕</div>
+                <div class="pfd-deploy-layer pfd-dl-inf">⚡ Inference Servers — GPUs running the model</div>
+                <div class="pfd-deploy-arr">↕</div>
+                <div class="pfd-deploy-layer pfd-dl-model">🧠 Model Weights — the trained AI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end build group -->
+
+
+      <!-- ── PHASE CARDS: USING THE AI ── -->
+      <div class="pf-phase-group">
+        <div class="pf-group-header pf-group-use">
+          <span class="pf-group-icon">💬</span>
+          <div>
+            <h2>Part 2 — Using the AI</h2>
+            <p>Everything that happens in the fraction of a second between you pressing Enter and your answer appearing on screen.</p>
+          </div>
+        </div>
+
+        <!-- PHASE 10 -->
+        <div class="pf-card">
+          <div class="pf-card-header pf-h-indigo">
+            <div class="pf-num">10</div>
+            <div class="pf-title-block">
+              <span class="pf-icon">💬</span>
+              <h3>You Type a Prompt</h3>
+            </div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-explanation">
+              <p>Your journey starts when you type a message into a chat interface or app and press Enter. That text travels securely over the internet to the AI company's servers.</p>
+              <ul class="pf-list">
+                <li>Your text is sent as an encrypted HTTPS request (same technology as online banking)</li>
+                <li>The AI also receives a hidden <em>system prompt</em> — background instructions set by the app developer (e.g. "You are a helpful assistant. Always be polite.")</li>
+                <li>Any previous messages in your conversation are also included so the AI has context</li>
+                <li>All of this together — system prompt + history + your message — is called the <em>context</em></li>
+              </ul>
+            </div>
+            <div class="pf-diagram">
+              <div class="pfd-title">What gets sent to the AI</div>
+              <div class="pfd-prompt-stack">
+                <div class="pfd-ps-layer pfd-ps-system">⚙️ <strong>System prompt</strong> (hidden)<br><small>"You are a helpful, friendly assistant…"</small></div>
+                <div class="pfd-ps-layer pfd-ps-history">🕐 <strong>Conversation history</strong><br><small>Earlier messages in this chat</small></div>
+                <div class="pfd-ps-layer pfd-ps-user">💬 <strong>Your message</strong><br><small>"What is the capital of France?"</small></div>
+                <div class="pfd-ps-arrow">↓ All sent together as one package</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 11 -->
+        <div class="pf-card">
+          <div class="pf-card-header pf-h-indigo">
+            <div class="pf-num">11</div>
+            <div class="pf-title-block">
+              <span class="pf-icon">🔢</span>
+              <h3>Tokenisation</h3>
+            </div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-explanation">
+              <p>The AI cannot read plain text — it only understands numbers. A component called the <em>tokeniser</em> converts your words into a sequence of numbers before passing them to the model.</p>
+              <ul class="pf-list">
+                <li>Your text is split into <em>tokens</em> — roughly three-quarters of a word each on average</li>
+                <li>Each token is looked up in a fixed vocabulary (like a dictionary of 50,000+ entries)</li>
+                <li>Each token is replaced by its unique number from the vocabulary</li>
+                <li>Those numbers are then converted into <em>vectors</em> — lists of hundreds of numbers that capture meaning</li>
+              </ul>
+            </div>
+            <div class="pf-diagram">
+              <div class="pfd-title">Tokenisation in Action</div>
+              <div class="pfd-tokenise">
+                <div class="pfd-t-input">"What is the capital of France?"</div>
+                <div class="pfd-t-arrow">↓ split into tokens</div>
+                <div class="pfd-t-tokens">
+                  <span class="pfd-t-chip pfd-tc-1">What<br><em>2061</em></span>
+                  <span class="pfd-t-chip pfd-tc-2"> is<br><em>318</em></span>
+                  <span class="pfd-t-chip pfd-tc-3"> the<br><em>262</em></span>
+                  <span class="pfd-t-chip pfd-tc-4"> capital<br><em>3139</em></span>
+                  <span class="pfd-t-chip pfd-tc-5"> of<br><em>286</em></span>
+                  <span class="pfd-t-chip pfd-tc-6"> France<br><em>4881</em></span>
+                  <span class="pfd-t-chip pfd-tc-7">?<br><em>30</em></span>
+                </div>
+                <div class="pfd-t-arrow">↓ numbers converted to meaning vectors</div>
+                <div class="pfd-t-vectors">[0.21, −0.84, 0.56, 0.03 …] × 7 tokens</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 12 -->
+        <div class="pf-card pf-card--spotlight">
+          <div class="pf-card-header pf-h-amber">
+            <div class="pf-num">12</div>
+            <div class="pf-title-block">
+              <span class="pf-icon">⚡</span>
+              <h3>Inference — The Model Thinks</h3>
+            </div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-explanation">
+              <p>The number vectors representing your prompt pass through every layer of the neural network. This is called <em>inference</em> — the model "thinking" to produce an answer.</p>
+              <ul class="pf-list">
+                <li><strong>Attention layers:</strong> The model looks at all your tokens simultaneously and works out how they relate to each other ("capital" and "France" are closely linked)</li>
+                <li><strong>Feed-forward layers:</strong> Each layer transforms the information, building a richer understanding</li>
+                <li><strong>96 layers deep</strong> (in a model like GPT-4) — each one refining the understanding further</li>
+                <li>At the end, the model produces a probability distribution: a score for every word in its vocabulary, reflecting how likely each word is to come next</li>
+              </ul>
+              <div class="pf-scale-note">⚡ <strong>Speed:</strong> This entire process takes milliseconds on high-end GPU hardware.</div>
+            </div>
+            <div class="pf-diagram">
+              <div class="pfd-title">Inside Inference</div>
+              <div class="pfd-inference">
+                <div class="pfd-inf-input">
+                  <div class="pfd-inf-box pfd-ib-input">📥 Token vectors<br><small>[2061, 318, 262, 3139, 286, 4881, 30]</small></div>
+                </div>
+                <div class="pfd-inf-arrow">↓</div>
+                <div class="pfd-inf-layers">
+                  <div class="pfd-inf-layer">Layer 1: Embedding</div>
+                  <div class="pfd-inf-layer pfd-il-attn">Layer 2–97: Attention + Feed-forward</div>
+                  <div class="pfd-inf-layer pfd-il-attn">⋮ (96 layers total)</div>
+                </div>
+                <div class="pfd-inf-arrow">↓</div>
+                <div class="pfd-inf-probs">
+                  <div class="pfd-inf-prob-title">Probability scores for next word:</div>
+                  <div class="pfd-prob-row"><span>Paris</span><div class="pfd-prob-bar"><div style="width:94%"></div></div><span>94%</span></div>
+                  <div class="pfd-prob-row"><span>Lyon</span><div class="pfd-prob-bar"><div style="width:3%"></div></div><span>3%</span></div>
+                  <div class="pfd-prob-row"><span>London</span><div class="pfd-prob-bar"><div style="width:1%"></div></div><span>1%</span></div>
+                  <div class="pfd-prob-row"><span>other…</span><div class="pfd-prob-bar"><div style="width:2%"></div></div><span>2%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 13 -->
+        <div class="pf-card">
+          <div class="pf-card-header pf-h-amber">
+            <div class="pf-num">13</div>
+            <div class="pf-title-block">
+              <span class="pf-icon">✍️</span>
+              <h3>Response Generation — Word by Word</h3>
+            </div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-explanation">
+              <p>The model does not write the whole answer at once. It picks one token at a time, adds it to the growing reply, and then re-runs inference to pick the next token — repeating until the answer is complete.</p>
+              <ul class="pf-list">
+                <li>The highest-probability token is usually chosen (sometimes a little randomness is added to make responses feel more natural)</li>
+                <li>That token is added to the output and also fed back in as new context</li>
+                <li>Inference runs again to pick the <em>next</em> token</li>
+                <li>This repeats until the model generates a special "end of reply" token</li>
+                <li>Tokens are converted back to words by the tokeniser and sent to your screen</li>
+              </ul>
+            </div>
+            <div class="pf-diagram">
+              <div class="pfd-title">Generating One Word at a Time</div>
+              <div class="pfd-generate">
+                <div class="pfd-gen-step">
+                  <div class="pfd-gen-ctx">Context: "What is the capital of France?"</div>
+                  <div class="pfd-gen-pick">→ picks: <strong class="pfd-new-word">The</strong></div>
+                </div>
+                <div class="pfd-gen-step">
+                  <div class="pfd-gen-ctx">Context: "…France?" + "The"</div>
+                  <div class="pfd-gen-pick">→ picks: <strong class="pfd-new-word">capital</strong></div>
+                </div>
+                <div class="pfd-gen-step">
+                  <div class="pfd-gen-ctx">Context: "…France?" + "The capital"</div>
+                  <div class="pfd-gen-pick">→ picks: <strong class="pfd-new-word">of</strong></div>
+                </div>
+                <div class="pfd-gen-step">
+                  <div class="pfd-gen-ctx">Context: "…France?" + "The capital of"</div>
+                  <div class="pfd-gen-pick">→ picks: <strong class="pfd-new-word">France</strong></div>
+                </div>
+                <div class="pfd-gen-step">
+                  <div class="pfd-gen-ctx">Context: "…" + "The capital of France"</div>
+                  <div class="pfd-gen-pick">→ picks: <strong class="pfd-new-word">is Paris.</strong></div>
+                </div>
+                <div class="pfd-gen-result">✅ Full answer: "The capital of France is Paris."</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 14 -->
+        <div class="pf-card">
+          <div class="pf-card-header pf-h-teal">
+            <div class="pf-num">14</div>
+            <div class="pf-title-block">
+              <span class="pf-icon">🎉</span>
+              <h3>Your Answer Appears</h3>
+            </div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-explanation">
+              <p>As each token is generated it is immediately sent back to your screen. This is why AI answers appear to "stream in" word by word rather than all appearing at once.</p>
+              <ul class="pf-list">
+                <li>Tokens are decoded back into readable text by the tokeniser in reverse</li>
+                <li>Each token is transmitted to your device as soon as it is generated</li>
+                <li>Your screen renders each word as it arrives, giving the typing effect</li>
+                <li>The full exchange (your message + AI reply) is stored as conversation history for your next message</li>
+                <li>The cycle is now ready to repeat when you type your next question</li>
+              </ul>
+              <div class="pf-scale-note">⚡ <strong>Total time for this entire process</strong> (steps 10–14): typically 1–5 seconds for a full response.</div>
+            </div>
+            <div class="pf-diagram">
+              <div class="pfd-title">What You See</div>
+              <div class="pfd-chat-mock">
+                <div class="pfd-chat-bubble pfd-cb-user">What is the capital of France?</div>
+                <div class="pfd-chat-bubble pfd-cb-ai">
+                  The capital of France is <strong>Paris</strong>, a city famous for the Eiffel Tower, world-class cuisine, and rich history dating back over 2,000 years.
+                  <div class="pfd-stream-note">← streamed word by word as it is generated</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end use group -->
+
+      <!-- COMPLETE SUMMARY DIAGRAM -->
+      <div class="pf-summary">
+        <h2 class="pf-summary-title">The Complete Picture at a Glance</h2>
+        <div class="pf-summary-flow">
+          <div class="pf-sf-block pf-sfb-build">
+            <div class="pf-sf-icon">🌐</div>
+            <div class="pf-sf-label">Collect Data</div>
+          </div><div class="pf-sf-arr">→</div>
+          <div class="pf-sf-block pf-sfb-build">
+            <div class="pf-sf-icon">🧹</div>
+            <div class="pf-sf-label">Clean Data</div>
+          </div><div class="pf-sf-arr">→</div>
+          <div class="pf-sf-block pf-sfb-build">
+            <div class="pf-sf-icon">📐</div>
+            <div class="pf-sf-label">Design Model</div>
+          </div><div class="pf-sf-arr">→</div>
+          <div class="pf-sf-block pf-sfb-build">
+            <div class="pf-sf-icon">🖥️</div>
+            <div class="pf-sf-label">GPU Power</div>
+          </div><div class="pf-sf-arr">→</div>
+          <div class="pf-sf-block pf-sfb-build">
+            <div class="pf-sf-icon">🏋️</div>
+            <div class="pf-sf-label">Pre-Train</div>
+          </div><div class="pf-sf-arr">→</div>
+          <div class="pf-sf-block pf-sfb-build">
+            <div class="pf-sf-icon">📊</div>
+            <div class="pf-sf-label">Evaluate</div>
+          </div><div class="pf-sf-arr">→</div>
+          <div class="pf-sf-block pf-sfb-build">
+            <div class="pf-sf-icon">👤</div>
+            <div class="pf-sf-label">RLHF</div>
+          </div><div class="pf-sf-arr">→</div>
+          <div class="pf-sf-block pf-sfb-build">
+            <div class="pf-sf-icon">🛡️</div>
+            <div class="pf-sf-label">Safety</div>
+          </div><div class="pf-sf-arr">→</div>
+          <div class="pf-sf-block pf-sfb-build">
+            <div class="pf-sf-icon">🚀</div>
+            <div class="pf-sf-label">Deploy</div>
+          </div>
+          <div class="pf-sf-break"></div>
+          <div class="pf-sf-divider">↓ months of work → now available to you ↓</div>
+          <div class="pf-sf-break"></div>
+          <div class="pf-sf-block pf-sfb-use">
+            <div class="pf-sf-icon">💬</div>
+            <div class="pf-sf-label">You Prompt</div>
+          </div><div class="pf-sf-arr">→</div>
+          <div class="pf-sf-block pf-sfb-use">
+            <div class="pf-sf-icon">🔢</div>
+            <div class="pf-sf-label">Tokenise</div>
+          </div><div class="pf-sf-arr">→</div>
+          <div class="pf-sf-block pf-sfb-use">
+            <div class="pf-sf-icon">⚡</div>
+            <div class="pf-sf-label">Inference</div>
+          </div><div class="pf-sf-arr">→</div>
+          <div class="pf-sf-block pf-sfb-use">
+            <div class="pf-sf-icon">✍️</div>
+            <div class="pf-sf-label">Generate</div>
+          </div><div class="pf-sf-arr">→</div>
+          <div class="pf-sf-block pf-sfb-use">
+            <div class="pf-sf-icon">🎉</div>
+            <div class="pf-sf-label">Your Answer</div>
+          </div>
+        </div>
+        <div class="pf-summary-legend">
+          <span class="pf-legend-build">■ Building the AI (months)</span>
+          <span class="pf-legend-use">■ Using the AI (seconds)</span>
         </div>
       </div>
 
