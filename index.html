@@ -27,6 +27,7 @@
       <button class="nav-btn" data-tab="how">How AI Learns</button>
       <button class="nav-btn" data-tab="safe">Is AI Safe?</button>
       <button class="nav-btn" data-tab="fundamentals">AI Fundamentals</button>
+      <button class="nav-btn" data-tab="buzzwords">Buzz Words</button>
       <button class="nav-btn" data-tab="faq">Common Questions</button>
     </div>
   </nav>
@@ -893,6 +894,377 @@
           </div>
         </div>
       </div>
+
+    </section>
+
+    <!-- ── SECTION: BUZZ WORDS ── -->
+    <section id="tab-buzzwords" class="tab-section">
+
+      <div class="section-header">
+        <h1>AI Buzz Words — the jargon decoded</h1>
+        <p class="section-subtitle">
+          Every word the tech nerds use, explained simply. Search for any word or
+          filter by topic.
+        </p>
+      </div>
+
+      <!-- SEARCH + FILTER -->
+      <div class="bw-controls">
+        <div class="bw-search-wrap">
+          <span class="bw-search-icon">🔍</span>
+          <input
+            type="text"
+            id="bw-search"
+            class="bw-search"
+            placeholder="Search any word, e.g. hallucination…"
+            aria-label="Search buzz words"
+          />
+          <button class="bw-clear" id="bw-clear" aria-label="Clear search">✕</button>
+        </div>
+        <div class="bw-filters" id="bw-filters" role="group" aria-label="Filter by category">
+          <button class="bw-filter active" data-cat="all">All</button>
+          <button class="bw-filter" data-cat="learning">🧠 Learning</button>
+          <button class="bw-filter" data-cat="language">💬 Language</button>
+          <button class="bw-filter" data-cat="generation">🔮 Generation</button>
+          <button class="bw-filter" data-cat="structure">🏗️ Structure</button>
+          <button class="bw-filter" data-cat="problems">⚠️ Problems</button>
+          <button class="bw-filter" data-cat="systems">🤖 Systems</button>
+          <button class="bw-filter" data-cat="future">🚀 Future</button>
+        </div>
+      </div>
+
+      <p class="bw-count" id="bw-count"></p>
+
+      <!-- BUZZ WORD CARDS -->
+      <div class="bw-grid" id="bw-grid">
+
+        <!-- LEARNING -->
+        <div class="bw-card" data-cat="learning">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Machine Learning</h2>
+            <span class="bw-cat-tag bw-cat-learning">🧠 Learning</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "A subset of AI where systems learn from data without being explicitly programmed."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> Instead of a programmer writing every rule, the computer figures out the rules itself by studying thousands of examples — like a child learning what a dog looks like by seeing many dogs, not by reading a definition.</p>
+        </div>
+
+        <div class="bw-card" data-cat="learning">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Deep Learning</h2>
+            <span class="bw-cat-tag bw-cat-learning">🧠 Learning</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "A type of machine learning using multi-layered neural networks."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> A more powerful version of machine learning that uses many layers of processing — like peeling an onion — each layer understanding something more complex than the last. This is what powers modern AI.</p>
+        </div>
+
+        <div class="bw-card" data-cat="learning">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Training</h2>
+            <span class="bw-cat-tag bw-cat-learning">🧠 Learning</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "The process of feeding data to a model and optimising its parameters to minimise loss."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> Teaching the AI. You show it millions of examples, it makes guesses, it gets corrected, and gradually it gets better — the same way you learned to ride a bike by doing it, not by reading about it.</p>
+        </div>
+
+        <div class="bw-card" data-cat="learning">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Fine-tuning</h2>
+            <span class="bw-cat-tag bw-cat-learning">🧠 Learning</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "Further training a pre-trained model on a specific dataset to specialise its behaviour."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> Taking a general AI that knows a bit about everything and giving it extra lessons in one specific subject — like sending a qualified nurse back to school to specialise as a midwife.</p>
+        </div>
+
+        <div class="bw-card" data-cat="learning">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Reinforcement Learning</h2>
+            <span class="bw-cat-tag bw-cat-learning">🧠 Learning</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "Training an agent via reward signals to maximise cumulative reward over time."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> Teaching AI by reward and punishment — like training a dog. When it does something right, it gets a reward signal. When it does something wrong, it gets penalised. Over time it learns what leads to rewards.</p>
+        </div>
+
+        <div class="bw-card" data-cat="learning">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Overfitting</h2>
+            <span class="bw-cat-tag bw-cat-learning">🧠 Learning</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "When a model learns the training data too precisely and fails to generalise to new inputs."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> The AI memorised the answers instead of actually learning. Like a student who memorised last year's exam paper word for word — they pass that exact exam but fail any slightly different test.</p>
+        </div>
+
+        <!-- LANGUAGE -->
+        <div class="bw-card" data-cat="language">
+          <div class="bw-card-top">
+            <h2 class="bw-term">LLM</h2>
+            <span class="bw-cat-tag bw-cat-language">💬 Language</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "Large Language Model — a neural network trained on massive text corpora to understand and generate natural language."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> An AI that learned from an enormous amount of written text and can now read, write, and chat in plain English (and other languages). ChatGPT and Claude are both LLMs.</p>
+        </div>
+
+        <div class="bw-card" data-cat="language">
+          <div class="bw-card-top">
+            <h2 class="bw-term">GPT</h2>
+            <span class="bw-cat-tag bw-cat-language">💬 Language</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "Generative Pre-trained Transformer — OpenAI's series of large language models."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> GPT is the name of the AI brain inside ChatGPT, made by a company called OpenAI. "Generative" means it creates text. "Pre-trained" means it already studied a huge amount of text. "Transformer" is its technical design.</p>
+        </div>
+
+        <div class="bw-card" data-cat="language">
+          <div class="bw-card-top">
+            <h2 class="bw-term">NLP</h2>
+            <span class="bw-cat-tag bw-cat-language">💬 Language</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "Natural Language Processing — AI techniques for understanding, interpreting, and generating human language."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> The branch of AI focused on understanding human language — reading, writing, translating, and chatting. Any time AI deals with words and sentences, that is NLP at work.</p>
+        </div>
+
+        <div class="bw-card" data-cat="language">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Token</h2>
+            <span class="bw-cat-tag bw-cat-language">💬 Language</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "The atomic unit of text an LLM processes — roughly three to four characters or three-quarters of a word."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> AI does not read word by word — it reads in small chunks called tokens. The word "hamburger" might be split into two tokens: "ham" and "burger". This is how AI measures how much text it can handle at once.</p>
+        </div>
+
+        <div class="bw-card" data-cat="language">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Context Window</h2>
+            <span class="bw-cat-tag bw-cat-language">💬 Language</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "The maximum number of tokens an LLM can process in a single inference pass."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> How much the AI can "hold in its head" at once during a conversation. If you chat for a very long time, older parts of the conversation may fall out of its memory — like a piece of paper that can only hold so many words.</p>
+        </div>
+
+        <div class="bw-card" data-cat="language">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Prompt Engineering</h2>
+            <span class="bw-cat-tag bw-cat-language">💬 Language</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "The practice of crafting inputs to elicit optimal outputs from an LLM."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> Getting better at asking AI questions. A well-worded prompt gets a much better answer. "Give me a simple chicken soup recipe for two people, using only ingredients from a normal supermarket" gets a far better result than just typing "soup".</p>
+        </div>
+
+        <!-- GENERATION -->
+        <div class="bw-card" data-cat="generation">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Generative AI</h2>
+            <span class="bw-cat-tag bw-cat-generation">🔮 Generation</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "AI models that can create new content — text, images, audio, or video — rather than just classifying existing data."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> AI that creates new things — writing a poem, drawing a picture, composing music — rather than just sorting or labelling things. ChatGPT writing an email for you is Generative AI. So is Midjourney creating a painting from a description.</p>
+        </div>
+
+        <div class="bw-card" data-cat="generation">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Diffusion Model</h2>
+            <span class="bw-cat-tag bw-cat-generation">🔮 Generation</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "A generative model that learns to reverse a noise-adding process to generate high-quality images from random noise."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> The technology behind AI image generators like DALL·E and Stable Diffusion. It starts with random visual "snow" on a screen and gradually clears it up into a proper picture — like a photo developing in a darkroom, but driven by AI.</p>
+        </div>
+
+        <div class="bw-card" data-cat="generation">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Multimodal</h2>
+            <span class="bw-cat-tag bw-cat-generation">🔮 Generation</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "An AI model capable of processing and generating multiple input/output types — text, images, audio, and video."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> An AI that can handle more than one type of information. A multimodal AI can look at a photo you send it AND read your question about the photo AND give you a written answer — all in one go.</p>
+        </div>
+
+        <div class="bw-card" data-cat="generation">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Synthetic Data</h2>
+            <span class="bw-cat-tag bw-cat-generation">🔮 Generation</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "Artificially generated data used to train models when real data is scarce, sensitive, or biased."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> Fake data that AI makes up to train other AI. If a hospital wants to train an AI doctor but cannot share real patient records for privacy reasons, it can use AI to generate realistic-but-made-up medical records instead.</p>
+        </div>
+
+        <!-- STRUCTURE -->
+        <div class="bw-card" data-cat="structure">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Neural Network</h2>
+            <span class="bw-cat-tag bw-cat-structure">🏗️ Structure</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "A computational graph of interconnected nodes (neurons) organised in layers that transform input signals into outputs."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> The internal structure of an AI model, loosely inspired by the human brain. Thousands of tiny connected parts pass signals to each other and gradually adjust as the AI learns. You never see it — it is just the engine inside.</p>
+        </div>
+
+        <div class="bw-card" data-cat="structure">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Transformer</h2>
+            <span class="bw-cat-tag bw-cat-structure">🏗️ Structure</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "A neural network architecture using self-attention mechanisms to process sequences in parallel."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> The clever design that made modern AI chatbots possible. Before Transformers (invented in 2017), AI struggled with long sentences. The Transformer design lets AI read an entire passage at once and understand how all the words relate to each other.</p>
+        </div>
+
+        <div class="bw-card" data-cat="structure">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Parameters / Weights</h2>
+            <span class="bw-cat-tag bw-cat-structure">🏗️ Structure</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "The learnable numerical values in a neural network adjusted during training to minimise prediction error."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> All the knowledge inside an AI model is stored as billions of numbers (called parameters or weights). When people say "a 70 billion parameter model", they mean it has 70 billion of these numbers that together represent everything it has learned.</p>
+        </div>
+
+        <div class="bw-card" data-cat="structure">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Embedding</h2>
+            <span class="bw-cat-tag bw-cat-structure">🏗️ Structure</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "A dense numerical vector representation of data that captures semantic meaning in a high-dimensional space."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> AI converts words into lists of numbers so it can do maths with them. Words with similar meanings get similar numbers — so "dog" and "puppy" end up numerically close to each other. This is how AI understands that words are related.</p>
+        </div>
+
+        <div class="bw-card" data-cat="structure">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Foundation Model</h2>
+            <span class="bw-cat-tag bw-cat-structure">🏗️ Structure</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "A large model trained on broad data at scale, designed to be adapted for many downstream tasks."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> A massive general-purpose AI that serves as a starting point for many applications. GPT-4 and Claude are foundation models — companies build their own specialised products on top of them, the same way builders construct houses on top of concrete foundations.</p>
+        </div>
+
+        <!-- PROBLEMS -->
+        <div class="bw-card" data-cat="problems">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Hallucination</h2>
+            <span class="bw-cat-tag bw-cat-problems">⚠️ Problems</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "When an LLM generates plausible-sounding but factually incorrect or fabricated information."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> When AI makes things up and presents them as facts — confidently and convincingly, even when completely wrong. Ask an AI about a specific local business and it might invent opening hours, phone numbers, or even reviews that do not exist.</p>
+        </div>
+
+        <div class="bw-card" data-cat="problems">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Bias</h2>
+            <span class="bw-cat-tag bw-cat-problems">⚠️ Problems</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "Systematic errors in model outputs caused by skewed or unrepresentative training data."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> If the information used to train an AI contains unfair assumptions or unequal representation, the AI will repeat those same unfair patterns. For example, an AI trained mostly on text written by men may give answers that reflect a male perspective without realising it.</p>
+        </div>
+
+        <div class="bw-card" data-cat="problems">
+          <div class="bw-card-top">
+            <h2 class="bw-term">AI Safety</h2>
+            <span class="bw-cat-tag bw-cat-problems">⚠️ Problems</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "The field of research focused on ensuring AI systems behave as intended and do not cause unintended harm."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> The work researchers do to make sure AI stays helpful and does not cause harm — either accidentally or if misused. Like putting safety rails on a balcony, AI safety tries to prevent things going dangerously wrong as AI becomes more powerful.</p>
+        </div>
+
+        <div class="bw-card" data-cat="problems">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Alignment</h2>
+            <span class="bw-cat-tag bw-cat-problems">⚠️ Problems</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "Ensuring an AI system's objectives and behaviours remain consistent with human values and intentions."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> Making sure AI wants what we want. A misaligned AI might technically do what you said but not what you meant — like telling a robot to "clean the house as fast as possible" and it throws everything in the bin. Alignment research tries to close that gap.</p>
+        </div>
+
+        <div class="bw-card" data-cat="problems">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Deepfake</h2>
+            <span class="bw-cat-tag bw-cat-problems">⚠️ Problems</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "Synthetically generated media — video, audio, or images — in which a person's likeness is convincingly replaced using AI."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> A fake video or voice recording made by AI that looks and sounds completely real. A deepfake could show a celebrity saying something they never said, or mimic a family member's voice to try to trick you. This is why you should always verify unexpected calls asking for money.</p>
+        </div>
+
+        <!-- SYSTEMS -->
+        <div class="bw-card" data-cat="systems">
+          <div class="bw-card-top">
+            <h2 class="bw-term">API</h2>
+            <span class="bw-cat-tag bw-cat-systems">🤖 Systems</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "Application Programming Interface — a set of protocols allowing software applications to communicate with each other."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> A bridge that lets one piece of software talk to another. When a weather app on your phone shows today's forecast, it is using an API to fetch that data from a weather service. AI companies provide APIs so other apps can add AI features without building their own AI from scratch.</p>
+        </div>
+
+        <div class="bw-card" data-cat="systems">
+          <div class="bw-card-top">
+            <h2 class="bw-term">RAG</h2>
+            <span class="bw-cat-tag bw-cat-systems">🤖 Systems</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "Retrieval-Augmented Generation — combining a retrieval system with an LLM so it can reference up-to-date or private documents."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> Giving an AI access to a specific library of documents before it answers. Instead of only using what it learned during training, it can look things up in your company's files or a current database first — making answers more accurate and up to date.</p>
+        </div>
+
+        <div class="bw-card" data-cat="systems">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Vector Database</h2>
+            <span class="bw-cat-tag bw-cat-systems">🤖 Systems</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "A database optimised for storing and querying high-dimensional embedding vectors by semantic similarity."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> A special filing cabinet for AI. Instead of searching by exact words (like a normal database), it finds things by meaning — so searching "how do I fix a broken pipe?" would also surface results about "plumbing repairs" and "leaking tap", because they mean similar things.</p>
+        </div>
+
+        <div class="bw-card" data-cat="systems">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Open Source</h2>
+            <span class="bw-cat-tag bw-cat-systems">🤖 Systems</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "Software whose source code is publicly available for anyone to inspect, modify, and distribute."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> AI whose recipe is publicly shared so anyone can look at it, copy it, or improve it. Open-source AI (like Meta's Llama) is like a recipe book anyone can use. Closed-source AI (like GPT-4) is like a secret recipe — the company controls it and does not share how it works.</p>
+        </div>
+
+        <div class="bw-card" data-cat="systems">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Copilot</h2>
+            <span class="bw-cat-tag bw-cat-systems">🤖 Systems</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "An AI assistant embedded in software to assist users with tasks in real time."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> An AI sidekick built into a computer program that helps you as you work. Microsoft Copilot sits inside Word, Excel, and Outlook — it can draft emails, summarise documents, or create spreadsheet formulas while you are working, without you having to switch to a separate app.</p>
+        </div>
+
+        <!-- FUTURE -->
+        <div class="bw-card" data-cat="future">
+          <div class="bw-card-top">
+            <h2 class="bw-term">AGI</h2>
+            <span class="bw-cat-tag bw-cat-future">🚀 Future</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "Artificial General Intelligence — a hypothetical AI with human-level cognitive ability across all domains."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> An AI that can do anything a human can do — learn any skill, solve any problem, hold any conversation — as well as or better than a person. This does NOT exist yet. Today's AI is narrow: brilliant at specific tasks but helpless at others. AGI is what the sci-fi films imagine.</p>
+        </div>
+
+        <div class="bw-card" data-cat="future">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Autonomous AI</h2>
+            <span class="bw-cat-tag bw-cat-future">🚀 Future</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "AI systems capable of operating independently over extended periods, making decisions without human intervention."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> AI that can work on its own for long periods without a human checking every step. Imagine telling an AI "plan and book my whole holiday" and coming back an hour later to find flights booked, hotel reserved, and an itinerary ready — without you doing anything else.</p>
+        </div>
+
+        <div class="bw-card" data-cat="future">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Computer Vision</h2>
+            <span class="bw-cat-tag bw-cat-future">🚀 Future</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "The AI field concerned with enabling machines to interpret and act on visual information from the world."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> Teaching computers to "see" and understand images and video. This is what lets your phone unlock using your face, lets self-driving cars spot pedestrians, and lets AI doctors spot tumours in scans. Computers have no eyes — computer vision is how we give them sight.</p>
+        </div>
+
+        <div class="bw-card" data-cat="future">
+          <div class="bw-card-top">
+            <h2 class="bw-term">Benchmark</h2>
+            <span class="bw-cat-tag bw-cat-future">🚀 Future</span>
+          </div>
+          <p class="bw-nerd"><strong>Nerd says:</strong> "A standardised test used to evaluate and compare the performance of AI models."</p>
+          <p class="bw-plain"><strong>Plain English:</strong> A standardised exam for AI. Just as students sit the same exam so schools can compare results fairly, AI models are tested on the same set of questions so researchers can compare which model performs better — and by how much.</p>
+        </div>
+
+      </div>
+
+      <p class="bw-empty" id="bw-empty" style="display:none;">
+        No buzz words match your search. Try a different word.
+      </p>
 
     </section>
 

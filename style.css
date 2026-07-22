@@ -882,6 +882,211 @@ body {
 }
 
 /* ============================================================
+   BUZZ WORDS — CONTROLS
+   ============================================================ */
+.bw-controls {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bw-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--gray-light);
+  border: 2px solid #e2e8f0;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  transition: border-color 0.2s;
+}
+
+.bw-search-wrap:focus-within {
+  border-color: var(--blue-mid);
+}
+
+.bw-search-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.bw-search {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--gray-dark);
+  outline: none;
+  min-width: 0;
+}
+
+.bw-search::placeholder {
+  color: #94a3b8;
+}
+
+.bw-clear {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0.1rem 0.3rem;
+  border-radius: 50%;
+  line-height: 1;
+  display: none;
+}
+
+.bw-clear.visible {
+  display: block;
+}
+
+.bw-clear:hover {
+  background: #e2e8f0;
+  color: var(--gray-dark);
+}
+
+.bw-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.bw-filter {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 2px solid #e2e8f0;
+  background: var(--white);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gray-mid);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.bw-filter:hover {
+  border-color: var(--blue-mid);
+  color: var(--blue);
+}
+
+.bw-filter.active {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
+}
+
+.bw-count {
+  font-size: 0.82rem;
+  color: var(--gray-mid);
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+/* ============================================================
+   BUZZ WORDS — CARDS
+   ============================================================ */
+.bw-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .bw-grid { grid-template-columns: 1fr; }
+}
+
+.bw-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  border-left: 5px solid var(--blue-mid);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.bw-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.bw-card[data-cat="learning"]    { border-left-color: #3b82f6; }
+.bw-card[data-cat="language"]    { border-left-color: #8b5cf6; }
+.bw-card[data-cat="generation"]  { border-left-color: #0891b2; }
+.bw-card[data-cat="structure"]   { border-left-color: #f59e0b; }
+.bw-card[data-cat="problems"]    { border-left-color: #ef4444; }
+.bw-card[data-cat="systems"]     { border-left-color: #16a34a; }
+.bw-card[data-cat="future"]      { border-left-color: #d946ef; }
+
+.bw-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.bw-term {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--gray-dark);
+  line-height: 1.2;
+}
+
+.bw-cat-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.bw-cat-learning   { background: #dbeafe; color: #1e40af; }
+.bw-cat-language   { background: #ede9fe; color: #6d28d9; }
+.bw-cat-generation { background: #cffafe; color: #0e7490; }
+.bw-cat-structure  { background: #fef3c7; color: #92400e; }
+.bw-cat-problems   { background: #fee2e2; color: #991b1b; }
+.bw-cat-systems    { background: #dcfce7; color: #166534; }
+.bw-cat-future     { background: #fae8ff; color: #86198f; }
+
+.bw-nerd {
+  font-size: 0.82rem;
+  color: #64748b;
+  background: var(--gray-light);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.8rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.bw-plain {
+  font-size: 0.9rem;
+  color: var(--gray-dark);
+  line-height: 1.65;
+}
+
+.bw-card.hidden {
+  display: none;
+}
+
+.bw-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--gray-mid);
+  font-size: 1rem;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ============================================================
    FONT SIZE CONTROLS (accessibility toolbar)
    ============================================================ */
 .font-controls {
