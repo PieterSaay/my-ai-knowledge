@@ -1,3 +1,118 @@
+// ── Language switching ──
+const langBtns = document.querySelectorAll('.lang-btn');
+let currentLang = localStorage.getItem('lang') || 'en';
+
+const EN_CACHE = {};
+
+function cacheEnglish() {
+  ['what','everyday','how','safe','fundamentals','processflow','buzzwords','faq'].forEach(id => {
+    EN_CACHE[id] = document.getElementById('tab-' + id).innerHTML;
+  });
+  EN_CACHE.tagline  = document.getElementById('hdr-tagline').textContent;
+  EN_CACHE.ftrMain  = document.getElementById('ftr-main').textContent;
+  EN_CACHE.ftrNote  = document.getElementById('ftr-note').textContent;
+  document.querySelectorAll('.nav-btn').forEach(b => {
+    EN_CACHE['nav_' + b.dataset.tab] = b.textContent;
+  });
+}
+
+function reInitFaq() {
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const isOpen = question.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-question').forEach(q => {
+        q.setAttribute('aria-expanded', 'false');
+        q.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        question.setAttribute('aria-expanded', 'true');
+        question.nextElementSibling.classList.add('open');
+      }
+    });
+  });
+}
+
+function reInitBuzzWords() {
+  const search  = document.getElementById('bw-search');
+  const clear   = document.getElementById('bw-clear');
+  const cards   = document.querySelectorAll('.bw-card');
+  const empty   = document.getElementById('bw-empty');
+  const count   = document.getElementById('bw-count');
+  const filters = document.querySelectorAll('.bw-filter');
+  let activeCat = 'all';
+
+  function updateCount(v) {
+    count.textContent = v === cards.length
+      ? (currentLang === 'af' ? `Alle ${v} modewoorde word getoon` : `Showing all ${v} buzz words`)
+      : (currentLang === 'af' ? `${v} van ${cards.length} modewoorde` : `Showing ${v} of ${cards.length} buzz words`);
+  }
+
+  function filterBW() {
+    const q = search.value.toLowerCase().trim();
+    let visible = 0;
+    cards.forEach(card => {
+      const catMatch = activeCat === 'all' || card.dataset.cat === activeCat;
+      const txtMatch = !q || card.textContent.toLowerCase().includes(q);
+      if (catMatch && txtMatch) { card.classList.remove('hidden'); visible++; }
+      else card.classList.add('hidden');
+    });
+    empty.style.display = visible === 0 ? 'block' : 'none';
+    clear.classList.toggle('visible', search.value.length > 0);
+    updateCount(visible);
+  }
+
+  search.addEventListener('input', filterBW);
+  clear.addEventListener('click', () => { search.value = ''; filterBW(); search.focus(); });
+  filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filters.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCat = btn.dataset.cat;
+      filterBW();
+    });
+  });
+  updateCount(cards.length);
+}
+
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+
+  langBtns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+
+  if (lang === 'af' && typeof TRANS_AF !== 'undefined') {
+    document.getElementById('hdr-tagline').textContent = TRANS_AF.ui.tagline;
+    document.getElementById('ftr-main').textContent    = TRANS_AF.ui.footer.main;
+    document.getElementById('ftr-note').textContent    = TRANS_AF.ui.footer.note;
+    document.querySelectorAll('.nav-btn').forEach(b => {
+      if (TRANS_AF.ui.nav[b.dataset.tab]) b.textContent = TRANS_AF.ui.nav[b.dataset.tab];
+    });
+    Object.keys(TRANS_AF.sections).forEach(id => {
+      document.getElementById('tab-' + id).innerHTML = TRANS_AF.sections[id];
+    });
+  } else {
+    document.getElementById('hdr-tagline').textContent = EN_CACHE.tagline;
+    document.getElementById('ftr-main').textContent    = EN_CACHE.ftrMain;
+    document.getElementById('ftr-note').textContent    = EN_CACHE.ftrNote;
+    document.querySelectorAll('.nav-btn').forEach(b => {
+      if (EN_CACHE['nav_' + b.dataset.tab]) b.textContent = EN_CACHE['nav_' + b.dataset.tab];
+    });
+    ['what','everyday','how','safe','fundamentals','processflow','buzzwords','faq'].forEach(id => {
+      document.getElementById('tab-' + id).innerHTML = EN_CACHE[id];
+    });
+  }
+  reInitFaq();
+  reInitBuzzWords();
+}
+
+cacheEnglish();
+
+langBtns.forEach(btn => {
+  btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+});
+
+if (currentLang === 'af') setLanguage('af');
+
 // Tab navigation
 const navBtns = document.querySelectorAll('.nav-btn');
 const tabSections = document.querySelectorAll('.tab-section');
@@ -17,86 +132,8 @@ navBtns.forEach(btn => {
   });
 });
 
-// FAQ accordion
-const faqQuestions = document.querySelectorAll('.faq-question');
-
-faqQuestions.forEach(question => {
-  question.addEventListener('click', () => {
-    const isOpen = question.getAttribute('aria-expanded') === 'true';
-    const answer = question.nextElementSibling;
-
-    // Close all others
-    faqQuestions.forEach(q => {
-      q.setAttribute('aria-expanded', 'false');
-      q.nextElementSibling.classList.remove('open');
-    });
-
-    // Toggle clicked one
-    if (!isOpen) {
-      question.setAttribute('aria-expanded', 'true');
-      answer.classList.add('open');
-    }
-  });
-});
-
-// ── BUZZ WORDS: search + filter ──
-const bwSearch   = document.getElementById('bw-search');
-const bwClear    = document.getElementById('bw-clear');
-const bwCards    = document.querySelectorAll('.bw-card');
-const bwEmpty    = document.getElementById('bw-empty');
-const bwCount    = document.getElementById('bw-count');
-const bwFilters  = document.querySelectorAll('.bw-filter');
-
-let activeCat = 'all';
-
-function updateBwCount(visible) {
-  bwCount.textContent = visible === bwCards.length
-    ? `Showing all ${visible} buzz words`
-    : `Showing ${visible} of ${bwCards.length} buzz words`;
-}
-
-function filterBuzzWords() {
-  const query = bwSearch.value.toLowerCase().trim();
-  let visible = 0;
-
-  bwCards.forEach(card => {
-    const cat      = card.dataset.cat;
-    const text     = card.textContent.toLowerCase();
-    const catMatch = activeCat === 'all' || cat === activeCat;
-    const txtMatch = !query || text.includes(query);
-
-    if (catMatch && txtMatch) {
-      card.classList.remove('hidden');
-      visible++;
-    } else {
-      card.classList.add('hidden');
-    }
-  });
-
-  bwEmpty.style.display = visible === 0 ? 'block' : 'none';
-  bwClear.classList.toggle('visible', query.length > 0);
-  updateBwCount(visible);
-}
-
-bwSearch.addEventListener('input', filterBuzzWords);
-
-bwClear.addEventListener('click', () => {
-  bwSearch.value = '';
-  filterBuzzWords();
-  bwSearch.focus();
-});
-
-bwFilters.forEach(btn => {
-  btn.addEventListener('click', () => {
-    bwFilters.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeCat = btn.dataset.cat;
-    filterBuzzWords();
-  });
-});
-
-// Initialise count on page load
-updateBwCount(bwCards.length);
+reInitFaq();
+reInitBuzzWords();
 
 // ── Font size accessibility controls
 const fontControls = document.createElement('div');

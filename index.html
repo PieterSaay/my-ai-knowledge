@@ -15,7 +15,11 @@
         <span class="logo-icon">🤖</span>
         <span class="logo-text">Understanding AI</span>
       </div>
-      <p class="tagline">Plain talk about Artificial Intelligence — no tech degree required</p>
+      <p class="tagline" id="hdr-tagline">Plain talk about Artificial Intelligence — no tech degree required</p>
+      <div class="lang-switcher" id="lang-switcher" role="group" aria-label="Select language">
+        <button class="lang-btn active" data-lang="en">English</button>
+        <button class="lang-btn" data-lang="af">Afrikaans</button>
+      </div>
     </div>
   </header>
 
@@ -2006,15 +2010,16 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>
+    <p id="ftr-main">
       Made to help everyone understand AI — no matter your age or tech experience.
     </p>
-    <p class="footer-note">
+    <p class="footer-note" id="ftr-note">
       Information is for general understanding only. Always consult professionals
       for health, legal, and financial decisions.
     </p>
   </footer>
 
+  <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

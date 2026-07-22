@@ -78,6 +78,37 @@ body {
   font-style: italic;
 }
 
+.lang-switcher {
+  display: inline-flex;
+  gap: 0.25rem;
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+  padding: 0.3rem;
+  margin-top: 0.75rem;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lang-btn.active {
+  background: var(--white);
+  color: var(--blue);
+}
+
+.lang-btn:hover:not(.active) {
+  color: var(--white);
+  background: rgba(255,255,255,0.2);
+}
+
 /* ============================================================
    NAVIGATION
    ============================================================ */
